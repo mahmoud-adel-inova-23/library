@@ -52,8 +52,8 @@ class ApplicationController < ActionController::API
 
   def check_user_verfied
     response_faild(
-      errors: I18n.t(:unauthorized),
+      errors: I18n.t(:un_verifyed_email),
       status: :unauthorized
-    )
+    ) if @current_user.is_unverifyed
   end
 end

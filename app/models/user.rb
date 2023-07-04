@@ -20,4 +20,8 @@ class User < ApplicationRecord
   def mark_as_verified
     update_column(:email_verified_at, Time.current) if self.email_verified_at.nil?
   end
+
+  def is_unverifyed
+    self.email_verified_at.nil?
+  end
 end
