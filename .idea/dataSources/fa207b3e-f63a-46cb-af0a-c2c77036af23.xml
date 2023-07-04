@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="library: development">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
+    <root id="1">
+      <ServerVersion>14.8</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="admin_examble_development"/>
+    <database id="3" parent="1" name="admin_examble_test"/>
+    <database id="4" parent="1" name="firsttestrubyproject_development"/>
+    <database id="5" parent="1" name="firsttestrubyproject_test"/>
+    <database id="6" parent="1" name="library_development">
+      <Current>1</Current>
+    </database>
+    <database id="7" parent="1" name="library_test"/>
+    <database id="8" parent="1" name="postgres"/>
+    <database id="9" parent="1" name="template0"/>
+    <database id="10" parent="1" name="template1"/>
+    <schema id="11" parent="6" name="information_schema"/>
+    <schema id="12" parent="6" name="pg_catalog"/>
+    <schema id="13" parent="6" name="public">
+      <Current>1</Current>
+    </schema>
+  </database-model>
+</dataSource>

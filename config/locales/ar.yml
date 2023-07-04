@@ -1,0 +1,4 @@
+ar:
+  success_action: "تم بنجاح"
+  unauthorized: 'غير مصرح'
+  failed_action: "هناك خطأ ما"
