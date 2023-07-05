@@ -29,6 +29,18 @@ class BookSerializer
     }).serializable_hash
   end
 
+  attribute :categories, if: Proc.new { |record, params|
+    params[:include_relations]&.dig(:categories) || false
+  } do |book|
+    CategorySerializer.new(book.categories,{
+      params: {
+        include_relations: {
+          books: false
+        }
+      }
+    }).serializable_hash
+  end
+
   class << self
     def meta(books)
       {

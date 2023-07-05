@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.includes(:author,:shelve).page(params[:page])
+    @books = Book.includes(:author, :shelve, :categories).page(params[:page])
 
     response_success(
       data: BookSerializer.new(@books, {
@@ -8,7 +8,8 @@ class BooksController < ApplicationController
         params: {
           include_relations: {
             author: true,
-            shelve: true
+            shelve: true,
+            categories: true
           }
         }
       }).serializable_hash

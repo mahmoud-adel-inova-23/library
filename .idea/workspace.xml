@@ -5,44 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5f6171d-c377-4dc8-a36f-a6b856dc2797" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/spec/factories/books.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/66eec161-f878-4aeb-a0c6-b6afea81520c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/66eec161-f878-4aeb-a0c6-b6afea81520c/storage_v2/_src_/database/library_development.t98N4g.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/66eec161-f878-4aeb-a0c6-b6afea81520c/storage_v2/_src_/database/library_development.t98N4g/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/66eec161-f878-4aeb-a0c6-b6afea81520c/storage_v2/_src_/database/library_development.t98N4g/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/66eec161-f878-4aeb-a0c6-b6afea81520c/storage_v2/_src_/database/library_development.t98N4g/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fa207b3e-f63a-46cb-af0a-c2c77036af23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fa207b3e-f63a-46cb-af0a-c2c77036af23/storage_v2/_src_/database/library_development.t98N4g.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fa207b3e-f63a-46cb-af0a-c2c77036af23/storage_v2/_src_/database/library_development.t98N4g/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fa207b3e-f63a-46cb-af0a-c2c77036af23/storage_v2/_src_/database/library_development.t98N4g/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/library.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/decorators/book_category_decorator.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/book_category.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20230705113821_create_book_categories.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/factories/book_categories.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/authors_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/authors_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/books_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/books_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/categories_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/categories_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/shelves_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/shelves_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/decorators/authentication_decorator.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/decorators/author_decorator.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/decorators/book_decorator.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/decorators/category_decorator.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/decorators/shelve_decorator.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/decorators/test_email_decorator.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/decorators/user_decorator.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/authentication_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/authors_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/categories_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/shelves_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/users_helper.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/book.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/book.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/shelve.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/shelve.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/serializers/author_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/author_serializer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/category.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/category.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/serializers/book_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/book_serializer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/serializers/shelve_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/shelve_serializer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/serializers/category_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/category_serializer.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20230705085607_create_books.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230705085607_create_books.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1688548592969</updated>
       <workItem from="1688548594573" duration="409000" />
-      <workItem from="1688549891903" duration="6946000" />
+      <workItem from="1688549891903" duration="8234000" />
     </task>
     <servers />
   </component>
