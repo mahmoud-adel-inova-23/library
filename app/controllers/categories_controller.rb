@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.all.page(params[:page])
+    @categories = Category.page(params[:page])
     response_success(
       data: CategorySerializer.new(@categories,{
         meta: CategorySerializer.meta(@categories)

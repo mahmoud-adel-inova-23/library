@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_05_072134) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_05_085607) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,6 +18,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_072134) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.string "name"
+    t.bigint "author_id", null: false
+    t.bigint "shelve_id", null: false
+    t.datetime "borrowed_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_books_on_author_id"
+    t.index ["shelve_id"], name: "index_books_on_shelve_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -43,4 +54,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_072134) do
     t.index ["email"], name: "unique_emails", unique: true
   end
 
+  add_foreign_key "books", "authors"
+  add_foreign_key "books", "shelves", column: "shelve_id"
 end

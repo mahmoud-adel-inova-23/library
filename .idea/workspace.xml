@@ -5,9 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5f6171d-c377-4dc8-a36f-a6b856dc2797" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/models/author.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/author.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/factories/books.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/66eec161-f878-4aeb-a0c6-b6afea81520c.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/66eec161-f878-4aeb-a0c6-b6afea81520c/storage_v2/_src_/database/library_development.t98N4g.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/66eec161-f878-4aeb-a0c6-b6afea81520c/storage_v2/_src_/database/library_development.t98N4g/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/66eec161-f878-4aeb-a0c6-b6afea81520c/storage_v2/_src_/database/library_development.t98N4g/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/66eec161-f878-4aeb-a0c6-b6afea81520c/storage_v2/_src_/database/library_development.t98N4g/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fa207b3e-f63a-46cb-af0a-c2c77036af23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fa207b3e-f63a-46cb-af0a-c2c77036af23/storage_v2/_src_/database/library_development.t98N4g.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fa207b3e-f63a-46cb-af0a-c2c77036af23/storage_v2/_src_/database/library_development.t98N4g/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fa207b3e-f63a-46cb-af0a-c2c77036af23/storage_v2/_src_/database/library_development.t98N4g/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/library.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/authors_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/authors_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/books_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/books_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/categories_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/categories_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/shelves_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/shelves_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/decorators/authentication_decorator.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/decorators/author_decorator.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/decorators/book_decorator.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/decorators/category_decorator.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/decorators/shelve_decorator.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/decorators/test_email_decorator.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/decorators/user_decorator.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/authentication_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/authors_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/categories_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/shelves_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/users_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/book.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/book.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/shelve.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/shelve.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/serializers/author_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/author_serializer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/serializers/book_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/book_serializer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/serializers/shelve_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/shelve_serializer.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20230705085607_create_books.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230705085607_create_books.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +56,16 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2S9AnorrbygwtreIin6GGIrai2P" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -35,10 +74,17 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "ruby.rails.projectView.checked": "true",
+    "ruby.structure.view.model.defaults.configured": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spec/factories" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="TaskManager">
@@ -49,10 +95,14 @@
       <option name="presentableId" value="Default" />
       <updated>1688548592969</updated>
       <workItem from="1688548594573" duration="409000" />
+      <workItem from="1688549891903" duration="6946000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
