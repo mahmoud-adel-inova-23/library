@@ -49,6 +49,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_113821) do
 
   create_table "shelves", force: :cascade do |t|
     t.string "name", null: false
+    t.integer "max_amount", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "unique_shelve", unique: true
