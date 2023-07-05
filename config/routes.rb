@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
       get 'shelves' , to: 'shelves#index'
       get 'categories' , to: 'categories#index'
+      get 'authors' , to: 'authors#index'
     end
   end
 end
