@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :category do
-    name { Faker::Name.name }
+    name_en { Faker::Name.name }
+    name_ar { Faker::Name.name }
   end
 end

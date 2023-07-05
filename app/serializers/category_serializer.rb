@@ -1,6 +1,8 @@
 class CategorySerializer
   include JSONAPI::Serializer
-  attributes :name
+  attributes :name do |category|
+    category.name_en
+  end
 
   class << self
     def meta(categories)
