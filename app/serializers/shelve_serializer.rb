@@ -5,6 +5,18 @@ class ShelveSerializer
     record.created_at_formated
   end
 
+  attribute :books, if: Proc.new { |record, params|
+    params[:include_relations]&.dig(:books) || false
+  } do |shelve|
+    BookSerializer.new(shelve.books,{
+      params: {
+        include_relations: {
+          shelve: false
+        }
+      }
+    }).serializable_hash
+  end
+
   class << self
     def meta(shelves)
       {

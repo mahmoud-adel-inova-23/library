@@ -1,8 +1,8 @@
 class Category < ApplicationRecord
   paginates_per 10
 
-  extend Mobility
-  translates :name, type: :string
+  has_many :book_categories
+  has_many :books , :through => :book_categories
 
-  # validates :name, presence: true
+  validates :name, presence: true
 end

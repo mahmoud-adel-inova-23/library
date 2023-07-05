@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_05_130458) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_05_113821) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,6 +18,27 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_130458) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "book_categories", force: :cascade do |t|
+    t.bigint "book_id", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id", "category_id"], name: "index_book_categories_on_book_id_and_category_id", unique: true
+    t.index ["book_id"], name: "index_book_categories_on_book_id"
+    t.index ["category_id"], name: "index_book_categories_on_category_id"
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.string "name"
+    t.bigint "author_id", null: false
+    t.bigint "shelve_id", null: false
+    t.datetime "borrowed_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_books_on_author_id"
+    t.index ["shelve_id"], name: "index_books_on_shelve_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -53,6 +74,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_130458) do
 
   create_table "shelves", force: :cascade do |t|
     t.string "name", null: false
+    t.integer "max_amount", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "unique_shelve", unique: true
@@ -68,4 +90,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_130458) do
     t.index ["email"], name: "unique_emails", unique: true
   end
 
+  add_foreign_key "book_categories", "books"
+  add_foreign_key "book_categories", "categories"
+  add_foreign_key "books", "authors"
+  add_foreign_key "books", "shelves", column: "shelve_id"
 end
