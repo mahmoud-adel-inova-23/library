@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :books
   scope "(:locale)"  do
     scope :api do
       post '/auth/login', to: 'authentication#login'
