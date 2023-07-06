@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :book_categories
   scope "(:locale)"  do
     scope :api do
       post '/auth/login', to: 'authentication#login'
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
       get 'shelves' , to: 'shelves#index'
       get 'categories' , to: 'categories#index'
       get 'authors' , to: 'authors#index'
+      get 'books' , to: 'books#index'
     end
   end
 end

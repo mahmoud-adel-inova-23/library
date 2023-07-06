@@ -1,9 +1,16 @@
 class AuthorsController < ApplicationController
   def index
-    @authors = Author.all.page(params[:page])
+    @authors = Author.includes(:books).page(params[:page])
 
     response_success(
-      data: AuthorSerializer.new(@authors).serializable_hash
+      data: AuthorSerializer.new(@authors,{
+        meta: AuthorSerializer.meta(@authors),
+        params: {
+          include_relations: {
+            books: true
+          }
+        }
+      }).serializable_hash
     )
   end
 end

@@ -67,6 +67,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 6.0.0'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'mobility', '~> 1.3.0.rc1'
+  gem 'mobility-ransack', '~> 1.2.2'
+
 end
 
 group :development do
