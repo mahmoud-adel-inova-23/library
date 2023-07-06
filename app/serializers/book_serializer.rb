@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: books
+#
+#  id          :bigint           not null, primary key
+#  name        :string
+#  author_id   :bigint           not null
+#  shelve_id   :bigint           not null
+#  borrowed_at :datetime
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
 class BookSerializer
   include JSONAPI::Serializer
   attributes :name

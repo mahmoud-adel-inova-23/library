@@ -1,8 +1,15 @@
+# == Schema Information
+#
+# Table name: categories
+#
+#  id         :bigint           not null, primary key
+#  name       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 class CategorySerializer
   include JSONAPI::Serializer
-  attributes :name do |category|
-    category.name_en
-  end
+  attributes :name
 
   attribute :books, if: Proc.new { |record, params|
     params[:include_relations]&.dig(:books) || false
