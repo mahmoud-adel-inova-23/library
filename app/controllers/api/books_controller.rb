@@ -12,7 +12,7 @@ class Api::BooksController < ApiApplicationController
           include_relations: {
             author: true,
             shelve: true,
-            categories: true
+            categories: true,
           }
         }
       }).serializable_hash

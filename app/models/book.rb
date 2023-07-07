@@ -13,6 +13,10 @@
 class Book < ApplicationRecord
   extend Mobility
 
+  paginates_per 10
+  translates :name, type: :string, association_name: :translations, ransack: true
+
+  # Validations
   validate do |book|
     ShelveBookValidator.new(book).validate
   end
@@ -21,20 +25,21 @@ class Book < ApplicationRecord
     CategoryBookValidator.new(book).validate
   end
 
-  translates :name, type: :string, association_name: :translations, ransack: true
-  paginates_per 10
-  # validates :name ,presence: true
-  default_scope { order(id: :asc) }
-  # default_scope -> { includes(:translations) }
+  validates :author, presence: true
+  validates :shelve, presence: true
+  validates :name ,presence: true
 
-  scope :filter_by_name, -> (name) { ransack(name_cont: name).result if name.present? }
-  scope :filter_by_category, -> (categories) { joins(:categories).where(categories: { id: categories }) if categories.present? }
-
+  # Relations
   belongs_to :author
   belongs_to :shelve
 
   has_many :book_categories
   has_many :categories, :through => :book_categories
+
+  # Scopes
+  default_scope { order(id: :asc) }
+  scope :filter_by_name, -> (name) { ransack(name_cont: name).result if name.present? }
+  scope :filter_by_category, -> (categories) { joins(:categories).where(categories: { id: categories }) if categories.present? }
 
   def is_available
     self.borrowed_at.nil?

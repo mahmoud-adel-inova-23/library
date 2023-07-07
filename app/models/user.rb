@@ -17,6 +17,8 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true
   has_secure_password :password, validations: false
 
+  has_many :borrows
+
   def mark_as_verified
     update_column(:email_verified_at, Time.current) if self.email_verified_at.nil?
   end

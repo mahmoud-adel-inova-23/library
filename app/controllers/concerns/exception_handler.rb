@@ -88,7 +88,10 @@ module ExceptionHandler
     excep_logger.info("Full trace #{e.backtrace.join("\n")}")
     response_json_error(error: e.error, message:  I18n.t(:failed_action), status: :expectation_failed)
   end
+
+  # @param[ActionController::ParameterMissing] e
   def missing_parameters(e)
+    puts e.message
     excep_logger.info("Missing Params #{ I18n.t(:failed_action)}")
     excep_logger.info("Full trace #{e.backtrace.join("\n")}")
     error = e.respond_to?(:error) ? e.error :  I18n.t(:failed_action)
@@ -117,7 +120,7 @@ module ExceptionHandler
   def access_forbidden(e)
     excep_logger.info("Access Forbidden #{ I18n.t(:failed_action)}")
     excep_logger.info("Full trace #{e.backtrace.join("\n")}")
-    response_json_error(error: e.error, message:  I18n.t(:failed_action), data: e.data, status: :forbidden)
+    response_json_error(error: e.error, message:  I18n.t(:failed_action), status: :forbidden)
   end
 
   def catch_invalid_locale(e)

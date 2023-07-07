@@ -5,8 +5,6 @@ class ApiApplicationController < ActionController::API
   before_action :authorize_request
   before_action :check_user_verfied , except: [:authorize_request]
 
-
-
   def switch_locale(&action)
     locale = params[:locale] || I18n.default_locale
     I18n.with_locale(locale, &action)

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
         get 'categories' , to: 'categories#index'
         get 'authors' , to: 'authors#index'
         get 'books' , to: 'books#index'
+
+        post 'borrow/store', to: 'borrow_book#store'
     end
   end
 
