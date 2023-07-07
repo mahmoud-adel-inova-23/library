@@ -1,4 +1,4 @@
-class CategoriesController < ApplicationController
+class Api::CategoriesController < ApiApplicationController
   def index
     @categories = Category.includes(:books).page(params[:page])
     response_success(

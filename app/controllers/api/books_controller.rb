@@ -1,6 +1,9 @@
-class BooksController < ApplicationController
+class Api::BooksController < ApiApplicationController
   def index
-    @books = Book.includes(:author, :shelve, :categories).page(params[:page])
+    @books = Book.includes(:translations, :author, :shelve, categories: :translations)
+                 .filter_by_category(JSON.parse(params[:categories]))
+                 .filter_by_name(params[:name])
+                 .page(params[:page])
 
     response_success(
       data: BookSerializer.new(@books, {

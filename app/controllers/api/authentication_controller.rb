@@ -1,4 +1,4 @@
-class AuthenticationController < ApplicationController
+class Api::AuthenticationController < ApiApplicationController
   skip_before_action :authorize_request, only: [:login, :register, :confim_email]
   skip_before_action :check_user_verfied , only: [:login, :register, :confim_email]
   after_action :send_confimation_email, only: :register

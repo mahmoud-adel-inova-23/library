@@ -1,4 +1,4 @@
-class ShelvesController < ApplicationController
+class Api::ShelvesController < ApiApplicationController
 
   def index
     @shelves = Shelve.includes(:books).page(params[:page])

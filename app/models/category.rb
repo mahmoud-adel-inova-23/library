@@ -9,7 +9,7 @@
 #
 class Category < ApplicationRecord
   extend Mobility
-  translates :name, type: :string
+  translates :name, type: :string, association_name: :translations
 
   paginates_per 10
 

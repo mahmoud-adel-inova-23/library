@@ -1,4 +1,4 @@
-class AuthorsController < ApplicationController
+class Api::AuthorsController < ApiApplicationController
   def index
     @authors = Author.includes(:books).page(params[:page])
 
