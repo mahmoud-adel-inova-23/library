@@ -13,8 +13,10 @@
 #  updated_at  :datetime         not null
 #
 class Borrow < ApplicationRecord
+  after_create :notify_admin
+  after_update :notify_user
   enum :status, {
-    review: BorrowStatus::REVIEW,
+    pending: BorrowStatus::PENDING,
     approved: BorrowStatus::APPROVED,
     rejected: BorrowStatus::REJECTED,
   }
@@ -37,6 +39,13 @@ class Borrow < ApplicationRecord
     if Borrow.where(returned_at: nil, book_id: book.id).where.not(status: BorrowStatus::REJECTED).any?
       errors.add(:book, "is Available try again later")
     end
+  end
+
+  def notify_admin
+    BorrowBookOrderNotification.with(book: self.book).deliver(AdminUser.first)
+  end
+  def notify_user
+    BorrowBookStatusUpdatedNotification.with(borrow: self).deliver(self.user)
   end
 
 end

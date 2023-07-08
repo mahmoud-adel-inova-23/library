@@ -93,3 +93,5 @@ group :test do
 end
 
 gem "sidekiq", "~> 7.1"
+
+gem "noticed", "~> 1.6"

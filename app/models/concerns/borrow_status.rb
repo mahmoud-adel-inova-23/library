@@ -1,5 +1,5 @@
 module BorrowStatus
-  REVIEW = 0
+  PENDING = 0
   APPROVED = 1
   REJECTED = 2
 end

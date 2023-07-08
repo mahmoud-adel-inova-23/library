@@ -15,3 +15,15 @@
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #6090DB; }
+
+.status-pending {
+  background-color: orange;
+}
+
+.status-approved {
+  background-color: green;
+}
+
+.status-rejected {
+  background-color: red;
+}
