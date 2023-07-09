@@ -17,6 +17,12 @@ class BookSerializer
     record.is_available
   end
 
+  attribute :rating, if: Proc.new { |record, params|
+    params[:include_relations]&.dig(:rating) || false
+  } do |book|
+    book.rating_avg.average_rating
+  end
+
   attribute :author, if: Proc.new { |book, params|
     params[:include_relations]&.dig(:author) || false
   } do |book|

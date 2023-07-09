@@ -8,7 +8,7 @@
 #  borrowed_at :datetime         not null
 #  return_time :datetime         not null
 #  returned_at :datetime
-#  status      :integer          default("review")
+#  status      :integer          default("pending")
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #

@@ -36,11 +36,27 @@ class Book < ApplicationRecord
   has_many :book_categories
   has_many :categories, :through => :book_categories
   has_many :borrows
+  has_many :reviews
+
+  has_one :rating_avg, -> { with_rating_avg }, class_name: 'Book', foreign_key: :id
 
   # Scopes
   default_scope { order(id: :asc) }
+
   scope :filter_by_name, -> (name) { ransack(name_cont: name).result if name.present? }
-  scope :filter_by_category, -> (categories) { joins(:categories).where(categories: { id: categories }) if categories.present? }
+  scope :filter_by_category, -> (categories) { joins(:categories).where(categories: { id: JSON.parse(categories) }) if categories.present? }
+  scope :order_by_rating, -> (rate) {
+    left_outer_joins(:reviews)
+      .group(:id)
+      .reorder(
+        Arel.sql("AVG(reviews.rating) #{rate.upcase} NULLS LAST")
+      ) if rate.present?
+  }
+  scope :with_rating_avg, -> {
+    left_outer_joins(:reviews)
+      .group(:id)
+      .select("books.*, AVG(COALESCE(reviews.rating, 0)) AS average_rating")
+  }
 
   def is_available
     self.borrowed_at.nil?
@@ -53,5 +69,4 @@ class Book < ApplicationRecord
   def mark_as_returned(user)
     self.borrows.where(user: user).first!.update!(returned_at: Time.current)
   end
-
 end
