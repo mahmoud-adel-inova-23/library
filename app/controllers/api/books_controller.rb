@@ -1,6 +1,6 @@
 class Api::BooksController < ApiApplicationController
   def index
-    @books = Book.includes(:translations, :author, :shelve, categories: :translations)
+    @books = Book.includes(:translations, :author, :shelve, :rating_avg, categories: :translations)
                  .filter_by_category(params[:categories])
                  .filter_by_name(params[:name])
                  .order_by_rating(params[:rate])
@@ -14,6 +14,7 @@ class Api::BooksController < ApiApplicationController
             author: true,
             shelve: true,
             categories: true,
+            rating: true
           }
         }
       }).serializable_hash

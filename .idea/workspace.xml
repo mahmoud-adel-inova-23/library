@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4eb106d2-80df-4bea-9a6e-b356787818f0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/models/review.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20230709095130_create_reviews.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/library.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/books_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/books_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/borrow_book_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/borrow_book_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/book.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/book.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/borrow.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/borrow.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/notification.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/notification.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/serializers/notification_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/notification_serializer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/serializers/book_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/book_serializer.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +128,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688895836152</updated>
-      <workItem from="1688895838026" duration="4555000" />
+      <workItem from="1688895838026" duration="8187000" />
     </task>
     <servers />
   </component>
