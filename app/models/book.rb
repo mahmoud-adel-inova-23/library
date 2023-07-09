@@ -36,12 +36,14 @@ class Book < ApplicationRecord
   has_many :book_categories
   has_many :categories, :through => :book_categories
   has_many :borrows
+  has_many :reviews
 
   # Scopes
   default_scope { order(id: :asc) }
-  scope :filter_by_name, -> (name) { ransack(name_cont: name).result if name.present? }
-  scope :filter_by_category, -> (categories) { joins(:categories).where(categories: { id: categories }) if categories.present? }
 
+  scope :filter_by_name, -> (name) { ransack(name_cont: name).result if name.present? }
+  scope :filter_by_category, -> (categories) { joins(:categories).where(categories: { id: JSON.parse(categories) }) if categories.present? }
+  scope :order_by_rating, -> (rate) { left_outer_joins(:reviews).group(:id).reorder(Arel.sql("AVG(reviews.rating) #{rate.upcase} NULLS LAST")) if rate.present? }
   def is_available
     self.borrowed_at.nil?
   end

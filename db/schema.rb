@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_07_211137) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_09_095130) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -123,6 +123,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_07_211137) do
     t.index ["recipient_type", "recipient_id"], name: "index_notifications_on_recipient"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.text "comment"
+    t.bigint "book_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_reviews_on_book_id"
+    t.index ["user_id", "book_id"], name: "unique_book_user_review", unique: true
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
   create_table "shelves", force: :cascade do |t|
     t.string "name", null: false
     t.integer "max_amount", null: false
@@ -147,4 +159,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_07_211137) do
   add_foreign_key "books", "shelves", column: "shelve_id"
   add_foreign_key "borrows", "books"
   add_foreign_key "borrows", "users"
+  add_foreign_key "reviews", "books"
+  add_foreign_key "reviews", "users"
 end
