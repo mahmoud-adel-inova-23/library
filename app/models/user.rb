@@ -17,6 +17,10 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true
   has_secure_password :password, validations: false
 
+  # Relations
+  has_many :borrows
+  has_many :notifications, as: :recipient, dependent: :destroy
+
   def mark_as_verified
     update_column(:email_verified_at, Time.current) if self.email_verified_at.nil?
   end
