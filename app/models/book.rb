@@ -27,7 +27,7 @@ class Book < ApplicationRecord
 
   validates :author, presence: true
   validates :shelve, presence: true
-  validates :name ,presence: true
+  validates :name, presence: true
 
   # Relations
   belongs_to :author
@@ -35,6 +35,7 @@ class Book < ApplicationRecord
 
   has_many :book_categories
   has_many :categories, :through => :book_categories
+  has_many :borrows
 
   # Scopes
   default_scope { order(id: :asc) }
@@ -48,4 +49,9 @@ class Book < ApplicationRecord
   def created_at_formated
     self.created_at.strftime("%B %d, %Y")
   end
+
+  def mark_as_returned(user)
+    self.borrows.where(user: user).first!.update!(returned_at: Time.current)
+  end
+
 end

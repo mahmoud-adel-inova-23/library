@@ -11,6 +11,8 @@ Rails.application.routes.draw do
         get 'books' , to: 'books#index'
 
         post 'borrow/store', to: 'borrow_book#store'
+        post 'borrow/return/:id', to: 'borrow_book#return_book'
+
         get 'notifications', to: 'notification#index'
     end
   end
