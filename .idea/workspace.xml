@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="affe671f-6d09-48a8-bf5f-de46540d53b7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/library.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/active_admin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/active_admin.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/admin_user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/admin_user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/borrows.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/borrows.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/borrow_book_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/borrow_book_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/notification_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/notification_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/borrow.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/borrow.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/concerns/borrow_status.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/concerns/borrow_status.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +112,8 @@
       <workItem from="1688638284033" duration="8304000" />
       <workItem from="1688647069477" duration="1819000" />
       <workItem from="1688733346715" duration="6310000" />
-      <workItem from="1688761082174" duration="14535000" />
+      <workItem from="1688761082174" duration="14962000" />
+      <workItem from="1688882423392" duration="2916000" />
     </task>
     <servers />
   </component>

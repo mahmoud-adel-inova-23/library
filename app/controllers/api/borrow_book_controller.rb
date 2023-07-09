@@ -4,7 +4,7 @@ class Api::BorrowBookController < ApiApplicationController
       params.require(:borrow).permit(:book_id, :borrowed_at, :return_time)
     )
 
-    response_success(data: [])
+    response_success
   end
 
   private

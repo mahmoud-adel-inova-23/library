@@ -1,4 +1,17 @@
 ActiveAdmin.register Borrow do
+  includes(book: :translations)
+  includes :user
+
+  controller do
+    def scoped_collection
+      super.includes(book: :translations)
+    end
+  end
+
+  filter :book, collection: -> { Book.includes(:translations).all.map { |b| [b.name, b.id] } }
+
+
+
   action_item :approve, only: :show do
     link_to "Apprrove", approve_admin_borrow_path(borrow), method: :put if borrow.pending?
   end
@@ -36,6 +49,8 @@ ActiveAdmin.register Borrow do
         status_tag b.status, class: 'status-rejected'
       end
     end
+    column('Returned') { |b| status_tag b.returned_at? }
+    column('Returned At') { |b|  b.returned_at_formated }
     actions
   end
   # See permitted parameters documentation:

@@ -15,6 +15,7 @@
 class Borrow < ApplicationRecord
   after_create :notify_admin
   after_update :notify_user
+
   enum :status, {
     pending: BorrowStatus::PENDING,
     approved: BorrowStatus::APPROVED,
@@ -48,4 +49,7 @@ class Borrow < ApplicationRecord
     BorrowBookStatusUpdatedNotification.with(borrow: self).deliver(self.user)
   end
 
+  def returned_at_formated
+    self.returned_at&.strftime("%B %d, %Y")
+  end
 end
