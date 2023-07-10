@@ -36,6 +36,7 @@ module ExceptionHandler
     rescue_from ActionController::RoutingError, with: :not_found
     rescue_from ExceptionHandler::MissingToken, with: :unauthorized_request
     rescue_from ExceptionHandler::InvalidToken, with: :unauthorized_request
+    rescue_from JWT::VerificationError, with: :unauthorized_request
     rescue_from ExceptionHandler::InvalidDeviceId, with: :four_twenty_two
     rescue_from ExceptionHandler::AccountNotVerified, with: :four_twenty_two
     rescue_from ExceptionHandler::InvalidUserData, with: :four_twenty_two
@@ -64,7 +65,7 @@ module ExceptionHandler
     excep_logger.info("442 #{e.message}")
     excep_logger.info("Full trace #{e.backtrace.join("\n")}")
     error = e.respond_to?(:error) ? e.error : e.message
-    response_json_error(error: error, message: I18n.t(:failed_action), status: :unprocessable_entity)
+    response_json_error(error: e.message, message: I18n.t(:failed_action), status: :unprocessable_entity)
   end
   def something_went_wrong(e)
     excep_logger.info("Something went wrong #{ I18n.t(:failed_action)}")
@@ -75,7 +76,7 @@ module ExceptionHandler
   def unauthorized_request(e)
     excep_logger.info("Unauthorized #{ I18n.t(:failed_action)}")
     excep_logger.info("Full trace #{e.backtrace.join("\n")}")
-    response_json_error(error: e.error, message:  I18n.t(:failed_action), status: :unauthorized)
+    response_json_error(error: e.message, message:  I18n.t(:failed_action), status: :unauthorized)
   end
   def fb_request(e)
     excep_logger.info("FB request #{ I18n.t(:failed_action)}")

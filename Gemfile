@@ -95,3 +95,5 @@ end
 gem "sidekiq", "~> 7.1"
 
 gem "noticed", "~> 1.6"
+
+gem 'whenever', require: false

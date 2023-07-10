@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4eb106d2-80df-4bea-9a6e-b356787818f0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/jobs/check_over_borrow_return_time_job.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/mailers/user_deadline_borrow_book_mailer.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/user_deadline_borrow_book_mailer/send_email.text.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/schedule.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/efa9a869-2e13-4f89-86ba-6fcbcee9b236.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/efa9a869-2e13-4f89-86ba-6fcbcee9b236.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/library.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api_application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api_application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/concerns/exception_handler.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/concerns/exception_handler.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/ar.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/ar.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/en.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,21 +39,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "ruby.rails.projectView.checked": "true",
-    "ruby.structure.view.model.defaults.configured": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/schedule__task__notifier&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/inova/Documents/projects/library/app/views/user_deadline_borrow_book_mailer&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/user_deadline_borrow_book_mailer" />
+    </key>
+  </component>
   <component name="RunManager" selected="Rails.library">
     <configuration name="library" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="library" />
@@ -125,7 +145,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688895836152</updated>
-      <workItem from="1688895838026" duration="9461000" />
+      <workItem from="1688895838026" duration="12850000" />
+      <workItem from="1688968338331" duration="4750000" />
     </task>
     <servers />
   </component>
