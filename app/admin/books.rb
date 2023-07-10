@@ -2,7 +2,6 @@ ActiveAdmin.register Book do
   includes :shelve, :author, :categories, :translations
   permit_params :name, :author_id, :shelve_id, category_ids: []
 
-
   filter :categories_id, as: :check_boxes, collection: -> {
     Category.includes(:translations).all.map { |c| [c.name, c.id] }
   }, multiple: true
@@ -38,7 +37,7 @@ ActiveAdmin.register Book do
       f.input :author
       f.input :shelve
       f.input :name
-      f.input :categories, as: :check_boxes, input_html: { multiple: true }, collection: Category.all.map{ |c| [c.name, c.id] }, selected: f.object.category_ids
+      f.input :categories, as: :check_boxes, input_html: { multiple: true }, collection: Category.all.map { |c| [c.name, c.id] }, selected: f.object.category_ids
     end
     # f.inputs :author, :shelve, :name
     f.actions # adds the 'Submit' and 'Cancel' buttons

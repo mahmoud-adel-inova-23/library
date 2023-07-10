@@ -8,6 +8,5 @@ class CheckOverBorrowReturnTimeJob < ApplicationJob
     @borrows.each do |borrow|
       UserDeadlineBorrowBookMailer.with(user: borrow.user,book: borrow.book).send_email.deliver_now
     end
-
   end
 end
