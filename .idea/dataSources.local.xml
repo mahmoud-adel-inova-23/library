@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="RM-231.9161.40">
+    <data-source name="library: test" uuid="3d10e7e0-4a71-40ff-a3af-bbe4ace9587d">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="library: production" uuid="098921ad-3e89-4c73-809d-8c7bc4db1bf1">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <user-name>library</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="library: development" uuid="efa9a869-2e13-4f89-86ba-6fcbcee9b236">
+      <database-info product="PostgreSQL" version="14.8 (Ubuntu 14.8-0ubuntu0.22.10.1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="14.8" exact-driver-version="42.6">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>inova</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>

@@ -34,7 +34,7 @@ gem "redis", "~> 4.0"
 # gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
@@ -43,6 +43,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
+gem "sassc-rails"
 # gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
@@ -56,13 +57,21 @@ group :development, :test do
   gem 'jsonapi-serializer'
   gem 'kaminari'
   gem 'mailtrap'
+
   gem 'activeadmin'
   gem 'devise'
   gem 'cancancan'
   gem 'draper'
   gem 'pundit'
+
   gem 'annotate'
   gem 'rails-i18n'
+  gem 'rspec-rails', '~> 6.0.0'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'mobility', '~> 1.3.0.rc1'
+  gem 'mobility-ransack', '~> 1.2.2'
+
 end
 
 group :development do
@@ -82,3 +91,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "sidekiq", "~> 7.1"
+
+gem "noticed", "~> 1.6"
+
+gem 'whenever', require: false

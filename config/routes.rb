@@ -1,6 +1,22 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  scope "(:locale)"  do
+     namespace :api do
+        post '/auth/login', to: 'authentication#login'
+        post '/auth/register', to: 'authentication#register'
+        put '/auth/confirmation-email', to: 'authentication#confim_email'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+        get 'shelves' , to: 'shelves#index'
+        get 'categories' , to: 'categories#index'
+        get 'authors' , to: 'authors#index'
+        get 'books' , to: 'books#index'
+
+        post 'borrow/store', to: 'borrow_book#store'
+        post 'borrow/return/:id', to: 'borrow_book#return_book'
+
+        get 'notifications', to: 'notification#index'
+    end
+  end
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 end
