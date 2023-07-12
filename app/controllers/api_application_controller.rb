@@ -1,3 +1,8 @@
+# frozen_string_literal: true
+
+# The base controller for all API controllers in the application.
+# Provides common functionality and configuration for all API controllers.
+# Inherits from `ActionController::API`.
 class ApiApplicationController < ActionController::API
   include ExceptionHandler
 
@@ -12,17 +17,17 @@ class ApiApplicationController < ActionController::API
 
   def response_success(data: [], status: :ok)
     render json: {
-      :data => data,
-      :message => I18n.t('success_action')
-    }, status: status
+      data:,
+      message: I18n.t('success_action')
+    }, status:
   end
 
   def response_faild(errors: [], status: :server_error)
     render json: {
-      :data => [],
-      :errors => errors,
-      :message => I18n.t('failed_action')
-    }, status: status
+      data: [],
+      errors:,
+      message: I18n.t('failed_action')
+    }, status:
   end
 
   def authorize_request

@@ -6,7 +6,7 @@ class CreateBorrows < ActiveRecord::Migration[7.0]
       t.datetime :borrowed_at, null: false
       t.datetime :return_time, null: false
       t.datetime :returned_at
-      t.integer :status, :limit => 3 , default: BorrowStatus::REVIEW
+      t.integer :status, :limit => 3 , default: 0
       t.timestamps
     end
   end
